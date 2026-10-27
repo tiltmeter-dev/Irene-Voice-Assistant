@@ -93,7 +93,7 @@ def run_weather(core:VACore, phrase:str, addparam:str):
         #one_call = mgr.one_call(options["lat"], options["lon"], lang="ru")
         #try:
         import requests
-        res = requests.get("https://api.openweathermap.org/data/2.5/onecall",
+        res = requests.get("https://api.openweathermap.org/data/3.0/onecall",
                            params={'lon': options["lon"], 'lat': options["lat"], 'units': 'metric', 'lang': 'ru', 'APPID': options["apiKey"]})
         data_one_call = res.json()
         print(data_one_call)
